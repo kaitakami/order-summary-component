@@ -1,0 +1,165 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* VARIABLES */
+
+:root {
+    /* FONT WEIGHT */
+    --bold: 900;
+    --regular: 700;
+    --thin: 500;
+    /* NEUTRAL COLORS */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    /* PRIMARY COLORS */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* BACKGROUND */
+body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--pale-blue);
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    height: 100%;
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    display: inline-block;
+    justify-self: center;
+    margin: 0.5rem;
+}
+
+.illustration {
+    border-radius: 20px 20px 0 0;
+}
+
+.card-container {
+    margin: 3rem;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: var(--bold);
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.text {
+    font-weight: var(--thin);
+    font-size: 16px;
+    color: var(--desaturated-blue);
+}
+
+.description {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.shopping-card {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.music {
+    display: flex;
+    align-items: center;
+}
+
+.icon-music {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.shopping-card-text {
+    display: inline;
+}
+
+.strong {
+    color: var(--dark-blue);
+    margin-bottom: 0.25rem;
+}
+
+.change {
+    text-decoration: underline;
+    align-self: center;
+    color: var(--bright-blue);
+    transition: 100ms;
+}
+
+.change:hover {
+    text-decoration: none;
+    color: var(--bright-blue);
+    opacity: 20%;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    color: var(--pale-blue);
+    background-color: var(--bright-blue);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: var(--bright-blue) 0px 8px 24px;
+    transition: ease-in-out 300ms;
+}
+
+.button:hover {
+    scale: 1.02;
+    background-color: hsl(245, 75%, 52%, .7);
+    box-shadow: var(--bright-blue) 0px 3px 12px;
+}
+
+
+.cancel {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    transition: 100ms;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media (max-width: 526px) {
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+
+    .main-container {
+        width: 320px;
+    }
+
+    .illustration {
+        width: 320px;
+    }
+
+    .card-container {
+        margin: 1rem;
+    }
+}
